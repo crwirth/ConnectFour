@@ -1,0 +1,46 @@
+/* game board table */
+body {
+    margin: auto;
+    background-color: rgb(53, 184, 236);
+}
+
+#board td {
+    width: 100px;
+    height: 100px;
+    border: solid 2px rgb(241, 236, 236);
+  }
+
+#board {
+    margin-left: auto;
+    margin-right: auto;
+}
+  
+  /* pieces are div drawn as colored circles */
+  
+  .piece {
+    margin: 5px;
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+  }
+  
+  .piece.p1 {
+    background-color: red;
+  }
+  
+  .piece.p2 {
+    background-color: blue;
+  }
+  
+  /* clickable areas for each column */
+  
+  #column-top td {
+    border: dashed 2px rgb(250, 244, 244);
+    margin: auto;
+
+  }
+  
+  #column-top td:hover {
+    background-color: rgb(245, 13, 226);
+  }
+  
