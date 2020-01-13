@@ -30,11 +30,11 @@ span.title {
   }
   
   .piece.p1 {
-    background-color: red;
+    background-color: rgb(243, 24, 196);
   }
   
   .piece.p2 {
-    background-color: blue;
+    background-color: rgb(251, 255, 0);
   }
   
   /* clickable areas for each column */
