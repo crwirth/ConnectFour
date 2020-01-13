@@ -49,3 +49,14 @@ span.title {
     background-color: rgb(245, 13, 226);
   }
   
+/*Button animation */
+
+  .button:hover {
+    background-color: rgb(228, 64, 179); 
+    color: white;
+  }
+
+  .button {
+    font-weight: bold;
+    font-family: lobster;
+  }
