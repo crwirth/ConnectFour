@@ -82,7 +82,7 @@ function endGame(msg) {
 
 
 
- /** handleClick: handle click of column top to play piece */
+//click of column top
 
 function handleClick(evt) {
     // get x from ID of clicked cell
@@ -98,12 +98,12 @@ function handleClick(evt) {
     board[y][x] = currPlayer;
     placeInTable(y, x);
     
-    // check for win
+    // check win
     if (checkForWin()) {
       return endGame(`Player ${currPlayer} won!`);
     }
     
-    // check for tie
+    // check tie
     if (board.every(row => row.every(cell => cell))) {
       return endGame('Tie!');
     }
@@ -112,13 +112,13 @@ function handleClick(evt) {
     currPlayer = currPlayer === 1 ? 2 : 1;
   }
   
-  /** checkForWin: check board cell-by-cell for "does a win start here?" */
+//check board cell by cell for win
   
   function checkForWin() {
     function _win(cells) {
       // Check four cells to see if they're all color of current player
-      //  - cells: list of four (y, x) cells
-      //  - returns true if all are legal coordinates & all match currPlayer
+      //  cells: list of four (y, x) cells
+      //  returns true if all are coordinates & all match currPlayer
   
       return cells.every(
         ([y, x]) =>
@@ -132,14 +132,13 @@ function handleClick(evt) {
   
     for (let y = 0; y < HEIGHT; y++) {
       for (let x = 0; x < WIDTH; x++) {
-        // get "check list" of 4 cells (starting here) for each of the different
-        // ways to win
+        // get "check list" of 4 cells for each of the different ways to win
         const horiz = [[y, x], [y, x + 1], [y, x + 2], [y, x + 3]];
         const vert = [[y, x], [y + 1, x], [y + 2, x], [y + 3, x]];
         const diagDR = [[y, x], [y + 1, x + 1], [y + 2, x + 2], [y + 3, x + 3]];
         const diagDL = [[y, x], [y + 1, x - 1], [y + 2, x - 2], [y + 3, x - 3]];
   
-        // find winner (only checking each win-possibility as needed)
+        // find winner
         if (_win(horiz) || _win(vert) || _win(diagDR) || _win(diagDL)) {
           return true;
         }
