@@ -4,9 +4,14 @@ body {
     background-color: rgb(53, 184, 236);
 }
 
+span.title {
+  text-align: center;
+  padding-left: 50px;
+}
+
 #board td {
-    width: 100px;
-    height: 100px;
+    width: 75px;
+    height: 75px;
     border: solid 2px rgb(241, 236, 236);
   }
 
